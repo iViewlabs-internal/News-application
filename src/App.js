@@ -19,15 +19,15 @@ const App=()=>{
      <div>
 
       <BrowserRouter>
-      <Home/>
-      {/* <NavBar/>
-      <LoadingBar
+      {/* <NavBar/> */}
+      {/* <LoadingBar
         color='#f11946'
         height={3}
         progress={progress}
       /> */}
         <Routes>
-            {/* <Route exact path="/" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route> */}
+        <Route path="/" element={<Home/>}></Route>
+            {/* <Route path="/" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route> */}
             <Route exact path="/business" element={<News setProgress={setProgress} apiKey={apiKey} key="business" pageSize={pageSize} country='in' category="business"/>}></Route>
             <Route exact path="/health" element={<News setProgress={setProgress} apiKey={apiKey} key="health" pageSize={pageSize} country='in' category="health"/>}></Route>
             <Route exact path="/general" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route>

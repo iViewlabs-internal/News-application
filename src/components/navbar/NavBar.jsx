@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar=()=> {
+  const navigate=useNavigate();
+  const logout=()=>{
+    navigate("/")
+  }
+
   return (
+    
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <div className="container-fluid">
@@ -26,41 +32,44 @@ const NavBar=()=> {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="general">
+                <Link className="nav-link" aria-current="page" to="/general">
                   Home
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="business">
+                <Link className="nav-link" to="/business">
                   Business
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="entertainment">
+                <Link className="nav-link" to="/entertainment">
                   Entertainment
                 </Link>
               </li>
               
               <li className="nav-item">
-                <Link className="nav-link" to="health">
+                <Link className="nav-link" to="/health">
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="science">
+                <Link className="nav-link" to="/science">
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="sports">
+                <Link className="nav-link" to="/sports">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="technology">
+                <Link className="nav-link" to="/technology">
                   Technology
                 </Link>
+              </li>
+              <li>
+                <button onClick={logout} className="btn btn-outline-secondary ">LogOut</button>
               </li>
             </ul>
           </div>
@@ -69,6 +78,7 @@ const NavBar=()=> {
       </div>
     );
   }
+
 
 
 export default NavBar;

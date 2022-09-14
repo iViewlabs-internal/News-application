@@ -1,0 +1,29 @@
+.login-email{
+    margin-top: 5px;
+    width: auto;
+    height:12;
+    border: solid;
+    color: rgb(12, 10, 10);
+    padding-left: 4px;
+    font-size: large;
+}
+
+/* "w-full h-12 border border-solid pl-4 text-lg" */
+.login-button{
+    background-color: rgb(183, 131, 111);
+    border-radius:10px;
+    width:auto;
+    height: auto;
+    padding: 15px;
+}
+
+
+.login-form{
+    margin-top: 5px;
+    width: auto;
+    border: solid;
+    color: white;
+    font-size: bold;
+    padding: 0px;
+}
+

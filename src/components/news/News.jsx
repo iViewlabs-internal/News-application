@@ -4,6 +4,7 @@ import NewsItem from "../newsitems/NewsItem";
 import Spinner from "../spinner/Spinner";
 import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
+import NavBar from '../navbar/NavBar';
 
 const News = (props)=>{
     const [articles, setArticles] = useState([])
@@ -47,7 +48,7 @@ const News = (props)=>{
  
         return (
             <>
-            
+            <NavBar/>
                 <h1 className="text-center" style={{ margin: '30px 0px', marginTop: '30px' }}>News - Top {capitalizeFirstLetter(props.category)} Headlines</h1>
                 {loading && <Spinner />}
                 <InfiniteScroll
