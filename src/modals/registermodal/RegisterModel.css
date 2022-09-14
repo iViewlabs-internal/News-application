@@ -1,0 +1,22 @@
+/* className="mt-5 h-12 w-full border border-solid bg-green-600 text-white font-bold hover:bg-green-500" */
+
+.form-group{
+    margin-top: 5px;
+    height: auto;
+    width: auto;
+    border: solid;
+    color: white;
+    font-size: bold;
+}
+        
+.input-field{
+    width: 100%;
+    padding: 8px;
+    border-radius:10px;
+}
+.register-button{
+    background-color: rgb(183, 131, 111);
+    border-radius:10px;
+    width:100%;
+    padding: 15px;
+}
