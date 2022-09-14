@@ -25,6 +25,8 @@ moreover , there will be navbar which contains category of news like sports , en
 
 For fetching News this api get used : https://newsapi.org/v2/top-headlines?country=us&apiKey=ef3fec39b4ce4bab9cad045d876f47be
 
+
+
 # Technology Used:
 
 HTML
