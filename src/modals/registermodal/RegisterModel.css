@@ -4,22 +4,19 @@
     width: auto;
     border: solid;
     color: white;
-    font-size: bold;
     padding: 0px;
-    
-
 }
 .btn-close{
     /* background-color:red; */
     /* background: red; */
     padding-bottom: 10;
     width: 10px;
-
 }
 
 .register-button{
-    background-color: rgb(183, 131, 111);
-    border-radius:10px;
+    background-color: #2f663c;
+    border-radius:8px;
     width:100%;
     padding: 15px;
+    color: white;
 }

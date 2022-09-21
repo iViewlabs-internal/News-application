@@ -33,12 +33,11 @@ const RegisterModal = () => {
     console.log(JSON.stringify(data, null, 2));
     localStorage.setItem("email", data.email);
     localStorage.setItem("password", data.password);
-    // alert(
-    //   "You gets register Successfully . Now you Can Login with your Credentials!"
-    // );
+    alert(
+      "You gets register Successfully . Now you Can Login with your Credentials!"
+    );
     window.location.href = "/";
     // navigate("/");
-    //  window.location.reload(false)
   };
 
   return (
@@ -130,6 +129,7 @@ const RegisterModal = () => {
                 </button>
               </div>
             </form>
+            
           </div>
         </div>
       </div>

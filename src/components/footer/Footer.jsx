@@ -8,8 +8,8 @@ function Footer() {
 
   return (
     <div className="footer">
-      <div className="">
-        <p className='pt-3'> Copyright {year}</p>
+      <div className="container">
+        <p className='pt-3'>&#169; Copyright {year} The News Nation Pvt Ltd. All Rights Reserved</p>
        </div>
     </div>
   )

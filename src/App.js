@@ -1,33 +1,42 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
-import News from './components/news/News';
+import News from './pages/news/News';
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar';
-import Home from './components/home/Home';
-
-
+import Home from './pages/home/Home';
 
 const App=()=>{
- 
   const pageSize = 5;
   const apiKey = 'ef3fec39b4ce4bab9cad045d876f47be'
   //const apiKey = process.env.REACT_APP_NEWS_API
   const [progress,setProgress] = useState(0);
+  // const [isLoggedin, setIsLoggedin] = useState(false);
+
+  // const login = () => {
+  //     localStorage.removeItem('');
+  //     setIsLoggedin(false);
+  
+  //   }
+  // const logout = () => {
+  //     localStorage.removeItem('');
+  //     setIsLoggedin(false);
+  
+  //   }
 
   return (
      <div>
-
+     
       <BrowserRouter>
       {/* <NavBar/> */}
-      {/* <LoadingBar
+      <LoadingBar
         color='#f11946'
         height={3}
         progress={progress}
-      /> */}
+      />
         <Routes>
         <Route path="/" element={<Home/>}></Route>
-            {/* <Route path="/" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route> */}
+            <Route path="/home" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route>
             <Route exact path="/business" element={<News setProgress={setProgress} apiKey={apiKey} key="business" pageSize={pageSize} country='in' category="business"/>}></Route>
             <Route exact path="/health" element={<News setProgress={setProgress} apiKey={apiKey} key="health" pageSize={pageSize} country='in' category="health"/>}></Route>
             <Route exact path="/general" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route>

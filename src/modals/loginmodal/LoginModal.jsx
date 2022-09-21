@@ -5,10 +5,7 @@ import "./loginModal.css";
 const LoginModals = () => {
   const [logEmail, setLogEmail] = useState("");
   const [logPassword, setLogPassword] = useState("");
-  const navigate = useNavigate();
-
-
-
+  const navigate = useNavigate(); 
   const log = () => {
     if (logEmail === "" && logPassword === "") {
       alert("Bad Try! Please Enter your Email and Password. ");
@@ -33,6 +30,7 @@ const LoginModals = () => {
     ) {
       setLogEmail("");
       setLogPassword("");
+
       navigate("/home");
     } else {
       setLogEmail("");
@@ -60,34 +58,42 @@ const LoginModals = () => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="login-form px-3 py-3">
-            <input
-              className="login-email"
-              type="email"
-              placeholder="Email"
-              value={logEmail}
-              onChange={(e) => {
-                setLogEmail(e.target.value);
-              }}
-            />
-            <br />
-            <br />
-
-            <input
-              className="input-field"
-              name="form__input"
-              type="password"
-              placeholder="Password"
-              value={logPassword}
-              onChange={(e) => {
-                setLogPassword(e.target.value);
-              }}
-            />
-          </div>
-          <br />
-          <button onClick={log} className="login-button">
-            Login
-          </button>
+          <>
+            <form className="login-form px-3 py-3" onSubmit={log}>
+              <div className="form-group">
+                <input
+                  className="emailID"
+                  type="email"
+                  placeholder="Your Email"
+                  value={logEmail}
+                  onChange={(e) => {
+                    setLogEmail(e.target.value);
+                  }}
+                />
+                <br />
+              </div>
+              <br />
+              <div className="form-group">
+                <input
+                  className="password-txt"
+                  name="form__input"
+                  type="password"
+                  placeholder="Your Password"
+                  value={logPassword}
+                  onChange={(e) => {
+                    setLogPassword(e.target.value);
+                  }}
+                />
+                <br />
+              </div>
+              <br />
+              <div className="form-group">
+                <button type="submit" className="login-button">
+                  Login
+                </button>
+              </div>
+            </form>
+          </>
         </div>
       </div>
     </div>

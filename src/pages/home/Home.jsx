@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Footer from "../footer/Footer"
+import Footer from "../../components/footer/Footer";
 import RegisterModal from "../../modals/registermodal/RegisterModal";
 import LoginModal from "../../modals/loginmodal/LoginModal";
 
@@ -35,7 +35,7 @@ const Home = () => {
           </ul>
         </div>
 
-        <Footer/>
+        <Footer />
       </div>
 
       {/* modal component for login */}
