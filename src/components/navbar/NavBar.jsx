@@ -1,14 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import "./navbar.css";
+import { Link, useNavigate } from "react-router-dom";
+import Search from "../search/Search";
 
-const NavBar=()=> {
+const NavBar = () => {
+  const navigate = useNavigate();
+
+  // const [isLoggedin, setIsLoggedin] = useState(false);
+
+  const logout = () => {
+    localStorage.removeItem("");
+    // setIsLoggedin(false);
+    navigate("/");
+  };
+
   return (
-    <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <div className="div-header">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            News
-          </Link>
+          <div className="navbar-brand">The Times News</div>
           <button
             className="navbar-toggler"
             type="button"
@@ -20,55 +30,57 @@ const NavBar=()=> {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse"
-            id="navbarSupportedContent"
-          >
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="general">
+                <Link className="nav-link" aria-current="page" to="/general">
                   Home
                 </Link>
               </li>
-
               <li className="nav-item">
-                <Link className="nav-link" to="business">
+                <Link className="nav-link" to="/business">
                   Business
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="entertainment">
+                <Link className="nav-link" to="/entertainment">
                   Entertainment
                 </Link>
               </li>
-              
+
               <li className="nav-item">
-                <Link className="nav-link" to="health">
+                <Link className="nav-link" to="/health">
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="science">
+                <Link className="nav-link" to="/science">
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="sports">
+                <Link className="nav-link" to="/sports">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="technology">
+                <Link className="nav-link" to="/technology">
                   Technology
+                </Link>
+              </li>
+              <Search/>
+              <li>
+                <Link to="/">
+                  <button onClick={logout} className="logout-btn">
+                    Log out
+                  </button>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      </div>
-    );
-  }
-
-
+    </div>
+  );
+};
 export default NavBar;
