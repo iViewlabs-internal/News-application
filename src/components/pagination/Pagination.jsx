@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import ReactPaginate from 'react-paginate';
 import './pagination.css';
-import NewsItem from '../../components/newsitems/NewsItem';
+import NewsItem from '../newsitems/NewsItem';
 
 const Pagination = (props) => {
     const [articles,setArticles]=useState(0)

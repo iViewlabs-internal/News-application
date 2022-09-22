@@ -15,7 +15,7 @@ const Home = () => {
       >
         <div className="heading">
           <div className="pt-4 mx-5">
-            <h2>News Nation</h2>
+            <h2>The Times News</h2>
           </div>
           <ul className="model-ul">
             <li

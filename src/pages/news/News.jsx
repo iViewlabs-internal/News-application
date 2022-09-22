@@ -4,15 +4,15 @@ import Spinner from "../../components/spinner/Spinner";
 import PropTypes from 'prop-types';
 // import InfiniteScroll from "react-infinite-scroll-component";
 import NavBar from '../../components/navbar/NavBar';
-import Footer from "../../components/footer/Footer";
-import Pagination from '../pagination/Pagination';
+// import Footer from "../../components/footer/Footer";
+// import Pagination from '../pagination/Pagination';
 
 
 const News = (props)=>{
     const [articles, setArticles] = useState([])
     const [loading, setLoading] = useState(true)
-    const [page, setPage] = useState(10)
-    const [totalResults, setTotalResults] = useState(0)
+    const [page, setPage] = useState(1)
+    // const [totalResults, setTotalResults] = useState(0)
     
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -28,7 +28,7 @@ const News = (props)=>{
         let parsedData = await data.json()
         props.setProgress(70);
         setArticles(parsedData.articles)
-        setTotalResults(parsedData.totalResults)
+        // setTotalResults(parsedData.totalResults)
         setLoading(false)
         props.setProgress(100);
     }
@@ -59,9 +59,9 @@ const News = (props)=>{
                         })}
                     </div>
                 </div>
-                <Pagination/>
+                {/* <Pagination/> */}
             
-                <Footer/>
+                {/* <Footer/> */}
             </>
         )   
 }

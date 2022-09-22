@@ -1,0 +1,6 @@
+.news-item{
+    display: flex;
+    justify-content: flex-end;
+    position:absolute;
+    right: 0;
+}
