@@ -1,15 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 
 .logout-btn{
     background-color: white;
     position: absolute;
     border-radius:8px;
     color: black;
-    margin-left: 250px;
+    margin-left: 350px;
     margin-top: 1.5px;
     border: solid;
     font-size: bold;
     height: 40px;
     width: 100px;
+    font-family: "Times New Roman", Times, serif;
+
     
 }
 

@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Search.css";
-// import NewsItem from "../../components/newsitems/NewsItem";
 
 const Search = (topic) => {
   const [articles, setArticles] = useState([]);
-  const [term, setTerm] = useState("everything");
   const [isLoading, setIsLoading] = useState(true);
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState()
 
   const handleChange = (e) => {
     setQuery(e.target.value)
-  
   }
   console.log(query)
 
@@ -21,7 +18,7 @@ const Search = (topic) => {
   const fetchArticles = async () => {
     try {
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?q=${query}&apiKey=ef3fec39b4ce4bab9cad045d876f47be`
+        // `https://newsapi.org/v2/top-headlines?q=${query}&apiKey=fc3c8738bf944c53983892a0fe000474`
       );
       const articles = await response.json();
       console.log(articles)
@@ -46,12 +43,12 @@ const Search = (topic) => {
           />
           <button onClick={fetchArticles} className="search-btn">Search</button>        
      </div>
-     <div>
+     {/* <div>
       {
         articles &&  
         articles.map(item => console.log(item))
       }
-     </div>
+     </div> */}
     </>
   );
 };

@@ -3,10 +3,10 @@ import "./RegisterModel.css";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const RegisterModal = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const validationSchema = Yup.object().shape({
     username: Yup.string()
       .required("Username is required")
