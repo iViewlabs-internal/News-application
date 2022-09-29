@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="container">
-        <p className='pt-3'>&#169; Copyright {year} The News Nation Pvt Ltd. All Rights Reserved</p>
+        <p className='pt-3'>&#169; Copyright {year} iView Lab Pvt Ltd. All Rights Reserved</p>
        </div>
     </div>
   )

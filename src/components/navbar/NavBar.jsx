@@ -5,20 +5,15 @@ import Search from "../search/Search";
 
 const NavBar = () => {
   const navigate = useNavigate();
-
-  // const [isLoggedin, setIsLoggedin] = useState(false);
-
   const logout = () => {
-    localStorage.removeItem("");
-    // setIsLoggedin(false);
+    localStorage.clear("");
     navigate("/");
   };
 
   return (
-    <div className="div-header">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="div-header mt-3">
+      <nav className="navbar navbar-expand-lg pd-5 navbar-dark bg-dark">
         <div className="container-fluid">
-          <div className="navbar-brand">The Times News</div>
           <button
             className="navbar-toggler"
             type="button"
@@ -33,7 +28,7 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/general">
+                <Link className="nav-link" to="/general">
                   Home
                 </Link>
               </li>
@@ -68,7 +63,7 @@ const NavBar = () => {
                   Technology
                 </Link>
               </li>
-              <Search/>
+              <Search />
               <li>
                 <Link to="/">
                   <button onClick={logout} className="logout-btn">

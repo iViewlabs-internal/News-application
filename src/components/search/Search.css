@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .search-page{
-    box-sizing: border-box;
+    
     border-radius:9px;
     padding-bottom: 10px;
-    margin-left:10vh;
+    margin-left:80px;
     width: 50%;
     justify-content: center;
     position: relative;
+    width: 360px;
 }
 
 .search-btn{
     border-radius: 9px;
     padding-bottom: 10px;
-    margin-left: 10px;
+    /* margin-left: 5px; */
 }

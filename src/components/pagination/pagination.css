@@ -1,6 +1,6 @@
 .pagination{
     color: rgb(41, 34, 34);
-    /* position: fixed; */
+    position: fixed;
     left:0;
     z-index: 2;
     display: flex;
