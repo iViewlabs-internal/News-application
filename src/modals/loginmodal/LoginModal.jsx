@@ -5,7 +5,7 @@ import "./loginModal.css";
 const LoginModals = () => {
   const [logEmail, setLogEmail] = useState("");
   const [logPassword, setLogPassword] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const log = () => {
     if (logEmail === "" && logPassword === "") {
       alert("Bad Try! Please Enter your Email and Password. ");
@@ -30,7 +30,6 @@ const LoginModals = () => {
     ) {
       setLogEmail("");
       setLogPassword("");
-
       navigate("/home");
     } else {
       setLogEmail("");

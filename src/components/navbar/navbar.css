@@ -1,20 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-
+.search-page{
+    display: flex;
+}
+.search-bar{
+    
+    border-radius:9px;
+    padding-bottom: 10px;
+    margin-left:100px;
+    width: 70%;
+    justify-content: center;
+    position: relative;
+    width: 360px;
+}
 .logout-btn{
     background-color: white;
     position: absolute;
     border-radius:8px;
     color: black;
-    margin-left: 350px;
+    margin-left: 300px;
     margin-top: 1.5px;
     border: solid;
     font-size: bold;
     height: 40px;
     width: 100px;
     font-family: "Times New Roman", Times, serif;
-
-    
+}
+.search-btn{
+    border-radius: 9px;
+    padding-bottom: 10px;
+    /* margin-left: 5px; */
 }
 
 .logout-btn:hover{

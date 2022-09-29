@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 2px;
+}
+.filter-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}

@@ -1,13 +1,53 @@
-import React, { useState } from "react";
+import React from "react";
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import Search from "../search/Search";
+import { useDispatch, useSelector } from "react-redux";
+import { searchData, searchQuery } from "../../redux/action/action";
 
 const NavBar = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const logout = () => {
-    localStorage.clear("");
-    navigate("/");
+    localStorage.removeItem("");
+        navigate("/");
+    
+    // localStorage.clear(); 
+    // sessionStorage.clear(); 
+    // navigate("/");
+  };
+
+  const store = useSelector((state) => state);
+  const query = store.searchReducer.searchQuery;
+  const date = store.searchReducer.setDate;
+  const sortby = store.searchReducer.setSortBy;
+  // console.log(query)
+  // console.log(store)
+  console.log(sortby);
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    dispatch(searchQuery(e.target.value));
+  };
+  const fetchRequest = async () => {
+    const data = await fetch(
+      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&apiKey=ef3fec39b4ce4bab9cad045d876f47be`
+    );
+    const dataJ = await data.json();
+    const result = dataJ.articles;
+    // console.log(result);
+    dispatch(searchData(result));
+    navigate("/search");
+  };
+  const pressed = async () => {
+    const data = await fetch(
+      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=publishedAt&apiKey=ef3fec39b4ce4bab9cad045d876f47be`
+    );
+    const dataJ = await data.json();
+    const result = dataJ.articles;
+    // console.log(result);
+    dispatch(searchData(result));
+    navigate("/search");
   };
 
   return (
@@ -63,7 +103,20 @@ const NavBar = () => {
                   Technology
                 </Link>
               </li>
-              <Search />
+              <li>
+                <div className="search-page">
+                  <input
+                    type="text"
+                    name="search"
+                    className="search-bar"
+                    onChange={handleChange}
+                    onKeyDown={pressed}
+                  />
+                  <button onClick={fetchRequest} className="search-btn">
+                    Search
+                  </button>
+                </div>
+              </li>
               <li>
                 <Link to="/">
                   <button onClick={logout} className="logout-btn">

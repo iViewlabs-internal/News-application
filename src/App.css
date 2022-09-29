@@ -13,3 +13,8 @@ body{
   margin:0 auto;
 
 }
+.page{
+  margin-bottom:12vh;
+  display: flex;
+  justify-content: center;
+}

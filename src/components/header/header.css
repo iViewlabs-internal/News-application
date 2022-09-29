@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.brand {
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 80px;
+  line-height: 100%;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: -3vh;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-family: "Times New Roman", Times, serif;
+  
+}
+
+.date {
+  margin-left: 40%;
+  font-weight: bold;
+  color: rgb(52, 50, 48);
+  margin-right: 50px;
+}
+.today-paper {
+  margin: 1px;
+  /* line-height: 100%; */
+  font-weight: bold;
+  margin-left: 1px;
+}
+.profile {
+  margin-left: 330px;
+}
+.image {
+  width: 30px;
+  margin-right: 20px;
+}

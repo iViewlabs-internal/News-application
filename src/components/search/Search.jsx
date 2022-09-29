@@ -1,55 +1,37 @@
-import React, { useState, useEffect } from "react";
-import "./Search.css";
+// import React from "react";
+// import NewsItem from "../newsitems/NewsItem";
 
-const Search = (topic) => {
-  const [articles, setArticles] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [query, setQuery] = useState()
+// const Search = (props) => {
 
-  const handleChange = (e) => {
-    setQuery(e.target.value)
-  }
-  console.log(query)
+//   console.log(props.data)
+  
+//   return (
+//     <div>
+//       <h1>hello</h1>
+//       <div className="container">
+//         <div className="row">
+//           {props.data?.map((element) => {
+//             return (
+//               <div className="col-md-3" key={element.url}>
+//                 <NewsItem
+//                   title={element.title ? element.title : ""}
+//                   description={element.description ? element.description : ""}
+//                   imageUrl={element.urlToImage}
+//                   newsUrl={element.url}
+//                   author={element.author}
+//                   date={element.publishedAt}
+//                   source={element.source.name}
+//                 />
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+// export default Search;
 
-  useEffect(() => {
-    fetchArticles();
-  }, []);
 
-  const fetchArticles = async () => {
-    try {
-      const response = await fetch(
-        // `https://newsapi.org/v2/top-headlines?q=${query}&apiKey=fc3c8738bf944c53983892a0fe000474`
-      );
-      const articles = await response.json();
-      console.log(articles)
-      setArticles(articles.articles);
 
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  console.log(articles)
 
-  return (
-    <>
-     <div>
-        <input
-          className="search-page"
-          placeholder="Search topic"
-          name="topic"
-          value={query}
-          onChange={handleChange}
-          onKeyDown={fetchArticles}
-          />
-          <button onClick={fetchArticles} className="search-btn">Search</button>        
-     </div>
-     {/* <div>
-      {
-        articles &&  
-        articles.map(item => console.log(item))
-      }
-     </div> */}
-    </>
-  );
-};
-export default Search;
