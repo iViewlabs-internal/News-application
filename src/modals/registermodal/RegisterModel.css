@@ -14,7 +14,8 @@
 }
 
 .register-button{
-    background-color: #2f663c;
+    border: none;
+    background-color: #2ca849;
     border-radius:8px;
     width:100%;
     padding: 15px;

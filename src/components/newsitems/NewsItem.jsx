@@ -7,7 +7,7 @@ const NewsItem = (props) => {
     <>
       <div>
         <div className="main-card my-4">
-          <div className="card">
+          <div className="card body">
             <div className="news-item"> {source} </div>
             <div className="card-body">
               <img
@@ -17,7 +17,7 @@ const NewsItem = (props) => {
                     : imageUrl
                 }
                 className="card-img-top"
-                alt="..."
+                alt="Xiaomi Mobile"
                 style={{ height: "30vh" }}
               />
               <h5 className="card-title">{title}</h5>
@@ -33,7 +33,7 @@ const NewsItem = (props) => {
                 rel="noreferrer"
                 href={newsUrl}
                 target="_blank"
-                className="btn btn-sm btn-dark"
+                className="btn btn-sm btn-dark text-center"
               >
                 Read More
               </a>
@@ -45,7 +45,3 @@ const NewsItem = (props) => {
   );
 };
 export default NewsItem;
-
-
-
-// on  {new Date(date).toGMTString()}

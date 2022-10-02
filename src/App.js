@@ -9,7 +9,6 @@ import SearchPage from './pages/searchpage/SearchPage';
 
 const App=()=>{
   const pageSize = 5;
-  // const apiKey = 'fc3c8738bf944c53983892a0fe000474'
   const apiKey='fc3c8738bf944c53983892a0fe000474'
   //const apiKey = process.env.REACT_APP_NEWS_API
   const [progress,setProgress] = useState(0);

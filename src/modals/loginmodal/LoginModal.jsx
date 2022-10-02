@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./loginModal.css";
 
-const LoginModals = () => {
+const LoginModal = () => {
   const [logEmail, setLogEmail] = useState("");
   const [logPassword, setLogPassword] = useState("");
   const navigate = useNavigate();
@@ -99,4 +99,4 @@ const LoginModals = () => {
   );
 };
 
-export default LoginModals;
+export default LoginModal;

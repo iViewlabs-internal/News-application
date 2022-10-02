@@ -3,22 +3,31 @@
 .search-page{
     display: flex;
 }
+.nav-link{
+    color: white;
+    font-size: large;
+}
 .search-bar{
     
     border-radius:9px;
-    padding-bottom: 10px;
-    margin-left:100px;
+    margin-left:17.5vw;
+    height: 5.5vh;
     width: 70%;
     justify-content: center;
     position: relative;
     width: 360px;
 }
+::placeholder{
+    padding-left: 0.5vw;
+}
+.search-btn:hover{
+    color: white;
+    background-color: rgb(64, 186, 64);
+}
 .logout-btn{
     background-color: white;
-    position: absolute;
     border-radius:8px;
     color: black;
-    margin-left: 300px;
     margin-top: 1.5px;
     border: solid;
     font-size: bold;
@@ -28,8 +37,10 @@
 }
 .search-btn{
     border-radius: 9px;
-    padding-bottom: 10px;
-    /* margin-left: 5px; */
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: center;
+    padding-top: 4px;
 }
 
 .logout-btn:hover{

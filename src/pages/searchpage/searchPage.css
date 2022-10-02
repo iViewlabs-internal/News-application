@@ -1,16 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+    
 .filter {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   font-family: "Times New Roman", Times, serif;
-  border-radius: 2px;
 }
 .filter-page {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  justify-content: end;
+  margin-top: 4vh;
+}
+.sortBy{
+  height: 40px;
+  margin-left: 2vw;
+  border-radius: 8px;
+}
+.date{
+  height: 40px;
+  border-radius: 8px;
+}
+.bg-img{
+  background-image: url("https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size:cover;
+  background-repeat:repeat-y;
+  height: auto;
+}
+.bg-image{
+  background-image: url("https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size:cover;
+  background-repeat:repeat-y;
+  height: 91.5vh;
+
 }

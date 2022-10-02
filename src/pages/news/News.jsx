@@ -10,8 +10,6 @@ import Pagination from "../../components/pagination/Pagination";
 let PageSize = 9;
 
 const News = (props) => {
-  const fetchUrl =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCDwD92x8C0v7SUGxvkaJWxC2rg6XSme8uJrHpjGnU47DNmzUnH00FhXtFVzQa7rhdxg&usqp=CAU";
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(8);
@@ -37,35 +35,28 @@ const News = (props) => {
     let parsedData = await data.json();
     props.setProgress(70);
     setArticles(parsedData.articles);
-    // setTotalResults(parsedData.totalResults)
     setLoading(false);
     props.setProgress(100);
   };
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - News`;
     updateNews();
-    // eslint-disable-next-line
   }, []);
   return (
     <>
-    <div className="bg-img"
-        style={{ backgroundImage: `url(${fetchUrl})`, opacity: "revert", height:"100%",width:"100%" }}>
-      <Header />
-      <NavBar />
-      
-        <h2
-          className="headline"
-          style={{
-            margin: "30px 0px",
-            marginTop: "30px",
-            color: "revert-layer",
-          }}
-        >
-          Top {capitalizeFirstLetter(props.category)} Headlines
-        </h2>
+      <div
+        className={
+          currentTableData.length ? "background-img" : "background-image"
+        }
+      >
+        <Header />
+        <NavBar />
 
-        {loading && <Spinner />}
         <div className="container">
+          <h2 className="headline">
+            Top {capitalizeFirstLetter(props.category)} Headlines
+          </h2>
+          {loading && <Spinner />}
           <div className="row">
             {currentTableData.map((element) => {
               return (
@@ -103,13 +94,11 @@ const News = (props) => {
 };
 News.defaultProps = {
   country: "in",
-  // pageSize: 10,
   category: "general",
 };
 
 News.propTypes = {
   country: PropTypes.string,
-  // pageSize: PropTypes.number,
   category: PropTypes.string,
 };
 

@@ -6,7 +6,7 @@
       height: 32px;
       text-align: center;
       margin: auto 4px;
-      color: rgba(118, 15, 15, 0.87);
+      color: rgba(15, 8, 8, 0.87);
       display: flex;
       box-sizing: border-box;
       align-items: center;
@@ -20,11 +20,11 @@
         cursor: default;
       }
       &:hover {
-        background-color: rgba(232, 221, 221, 0.87);
+        background-color: rgba(233, 139, 139, 0.87);
         cursor: pointer;
       }
       &.selected {
-        background-color: rgba(232, 221, 221, 0.87);
+        background-color: rgba(233, 139, 139, 0.87);
       }
       .arrow {
         &::before {
@@ -35,8 +35,8 @@
           display: inline-block;
           width: 0.4em;
           height: 0.4em;
-          border-right: 0.12em solid rgba(232, 221, 221, 0.87);
-          border-top: 0.12em solid rgba(232, 221, 221, 0.87);
+          border-right: 0.12em solid rgba(12, 12, 12, 0.87);
+          border-top: 0.12em solid rgba(16, 13, 13, 0.87);
         }
         &.left {
           transform: rotate(-135deg) translate(-50%);
@@ -48,8 +48,8 @@
       &.disabled {
         pointer-events: none;
         .arrow::before {
-          border-right: 0.12em solid rgba(232, 221, 221, 0.87);
-          border-top: 0.12em solid rgba(232, 221, 221, 0.87);
+          border-right: 0.12em solid rgba(64, 54, 54, 0.87);
+          border-top: 0.12em solid rgba(64, 54, 54, 0.87);
         }
         &:hover {
           background-color: transparent;

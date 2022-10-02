@@ -9,36 +9,38 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-.bg-img {
-  background: no-repeat;
+.bg-img-home {
+  background-image: url("https://images.pexels.com/photos/3095621/pexels-photo-3095621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
-  height: 100vh;
+  height: 91.5vh;
   background-position: center;
+
 }
 
 .model-ul {
   display: flex;
-  justify-content: end;
   padding-top: 10px;
   margin-right: 80px;
 }
-
+.login{
+  margin-right: 2vw;
+}
 .login,
 .register {
-  padding: 10px 10px;
+  padding: 4px 15px;
   font-weight: 800;
   list-style: none;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   cursor: pointer;
-  color: rgb(33, 27, 28);
+  color: black;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: "Times New Roman", Times, serif;
 }
 .login:hover,
 .register:hover {
-  background-color: #3f2217;
+  background-color: #28c93b;
   border: none;
   list-style: none;
   cursor: pointer;
