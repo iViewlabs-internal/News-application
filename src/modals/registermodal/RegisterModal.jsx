@@ -3,10 +3,8 @@ import "./RegisterModel.css";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-// import { useNavigate } from "react-router-dom";
 
 const RegisterModal = () => {
-  // const navigate = useNavigate();
   const validationSchema = Yup.object().shape({
     username: Yup.string()
       .required("Username is required")
@@ -31,13 +29,13 @@ const RegisterModal = () => {
   });
   const onSubmit = (data) => {
     console.log(JSON.stringify(data, null, 2));
+    localStorage.setItem("name", data.username);
     localStorage.setItem("email", data.email);
     localStorage.setItem("password", data.password);
     alert(
       "You gets register Successfully . Now you Can Login with your Credentials!"
     );
     window.location.href = "/";
-    // navigate("/");
   };
 
   return (
@@ -51,14 +49,13 @@ const RegisterModal = () => {
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
-            <h1 className="fs-4">Register</h1>
+            <h1 className="fs-4 fw-bold">Register</h1>
             <button
               type="button"
               className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-            > 
-            </button>
+            ></button>
           </div>
           <div className="register-form px-3 py-3">
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -124,12 +121,11 @@ const RegisterModal = () => {
                 <br />
               </div>
               <div className="form-group">
-                <button onClick={onSubmit} className="register-button" >
+                <button onClick={onSubmit} className="register-button fs-4">
                   Register
                 </button>
               </div>
             </form>
-            
           </div>
         </div>
       </div>

@@ -4,19 +4,15 @@ import RegisterModal from "../../modals/registermodal/RegisterModal";
 import LoginModal from "../../modals/loginmodal/LoginModal";
 
 const Home = () => {
-  const fetchedUrl =
-    "https://images.pexels.com/photos/3095621/pexels-photo-3095621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
   return (
     <div>
-      <div
-        className="bg-img"
-        style={{ backgroundImage: `url(${fetchedUrl})`, opacity: "revert" }}
-      >
+      <div className="bg-img-home">
         <div className="heading">
-          <div className="pt-4 mx-5">
-            <h2>The Times News</h2>
+          <div className="pt-4 mx-5 title">
+            <h1 className="fw-bolder">The Times News</h1>
           </div>
-          <ul className="model-ul">
+
+          <ul className="model-ul login-form">
             <li
               className="login"
               data-bs-toggle="modal"

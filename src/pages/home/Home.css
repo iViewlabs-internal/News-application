@@ -1,44 +1,48 @@
-.heading{
-    color: rgb(211, 203, 203);
-    font-weight: 800;
-    display:flex;
-    justify-content:space-between;
-    /* padding-bottom: 20px; */
-    margin: auto;
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.heading {
+  color: rgb(211, 203, 203);
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.bg-img{
-    background: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-position: center;
+.bg-img-home {
+  background-image: url("https://images.pexels.com/photos/3095621/pexels-photo-3095621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  height: 91.5vh;
+  background-position: center;
 }
 
-.model-ul{
-    display: flex;
-    justify-content: end;
-    padding-top: 10px;
-    margin-right: 80px;
+.model-ul {
+  display: flex;
+  padding-top: 10px;
+  margin-right: 80px;
 }
-
-.login,.register{
-   
-    padding: 10px 10px;
-    font-weight: 800;
-    list-style: none;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
-    color: rgb(33, 27, 28);
-    border: none;
-    border-radius: 10px;
-
-    }
-.login:hover,.register:hover{
-    background-color: #3f2217;
-    border: none;
-    list-style: none;
-    cursor: pointer;
-    color: white;
+.login {
+  margin-right: 2vw;
 }
-
+.login,
+.register {
+  padding: 4px 15px;
+  font-weight: 800;
+  list-style: none;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  font-family: "Times New Roman", Times, serif;
+}
+.login:hover,
+.register:hover {
+  background-color: #28c93b;
+  border: none;
+  list-style: none;
+  cursor: pointer;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}

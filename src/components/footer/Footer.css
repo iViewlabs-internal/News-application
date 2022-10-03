@@ -2,10 +2,6 @@
     background: black;
     color: white;
     display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     padding-top: 5px;
     text-align: center;
-    
 }

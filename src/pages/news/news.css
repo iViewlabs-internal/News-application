@@ -1,44 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-.brand {
-  justify-content: center;
-  text-align: center;
-  font-weight: bolder;
-  text-shadow: 1px 1px;
-  font-size: 90px;
-  line-height: 100%;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.date {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  margin: 1px;
-  line-height: 100%;
-  margin-left: 35%;
-  font-weight: bold;
-  color: rgb(52, 50, 48);
-}
-
 .headline {
   font-family: "Times New Roman", Times, serif;
-  text-align: left;
+  text-align: center;
+  margin:"30px 0px";
+  margin-top: 30px;
   font-size: 40px;
   font-weight: bolder;
-  color: rgb(50, 45, 45);
+}
+.background-img{  
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCDwD92x8C0v7SUGxvkaJWxC2rg6XSme8uJrHpjGnU47DNmzUnH00FhXtFVzQa7rhdxg&usqp=CAU");
+  background-size:cover;
+  background-repeat:repeat-y;
+  height: auto;
 }
 
-.today-paper {
-  font-family: "Times New Roman", Times, serif;
-  margin: 1px;
-  /* line-height: 100%; */
-  font-weight: bold;
-  margin-left: 30px;
-  background-color: white;
-  border-color: white;
-}
+.background-image{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCDwD92x8C0v7SUGxvkaJWxC2rg6XSme8uJrHpjGnU47DNmzUnH00FhXtFVzQa7rhdxg&usqp=CAU");
+  background-size:cover;
+  background-repeat:repeat-y;
+  height: 91.5vh;
 
-.date-time{
-  display: flex;
-  align-items: center;
 }

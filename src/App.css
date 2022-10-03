@@ -1,15 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-body{
-  font-family: "Lato",sans-serifs;
+body {
+  font-family: "Times New Roman", Times, serif;
   background-color: white;
   align-items: center;
-  /* background-image: url("https://images.pexels.com/photos/3123913/pexels-photo-3123913.jpeg?cs=srgb&dl=pexels-ylanite-koppens-3123913.jpg&fm=jpg"); */
   background-repeat: no-repeat;
   background-size: 1800px 1400px;
+  font-size: 17px;
 }
-.container{
+.container {
   max-width: auto;
-  margin:0 auto;
-
+  margin: 0 auto;
+}
+.page {
+  display: flex;
+  justify-content: center;
 }
