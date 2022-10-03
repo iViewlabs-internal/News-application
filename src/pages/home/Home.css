@@ -14,7 +14,6 @@
   background-size: cover;
   height: 91.5vh;
   background-position: center;
-
 }
 
 .model-ul {
@@ -22,7 +21,7 @@
   padding-top: 10px;
   margin-right: 80px;
 }
-.login{
+.login {
   margin-right: 2vw;
 }
 .login,

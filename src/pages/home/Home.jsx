@@ -8,10 +8,11 @@ const Home = () => {
     <div>
       <div className="bg-img-home">
         <div className="heading">
-          <div className="pt-4 mx-5">
-            <h2 className="fw-bolder">The Times News</h2>
+          <div className="pt-4 mx-5 title">
+            <h1 className="fw-bolder">The Times News</h1>
           </div>
-          <ul className="model-ul">
+
+          <ul className="model-ul login-form">
             <li
               className="login"
               data-bs-toggle="modal"

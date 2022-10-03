@@ -19,7 +19,7 @@ const NavBar = () => {
   };
   const fetchRequest = async () => {
     const data = await fetch(
-      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&language=en&apiKey=ef3fec39b4ce4bab9cad045d876f47be`
+      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&language=en&apiKey=fc3c8738bf944c53983892a0fe000474`
     );
     const dataJ = await data.json();
     const result = dataJ.articles;
@@ -28,7 +28,7 @@ const NavBar = () => {
   };
   const pressed = async () => {
     const data = await fetch(
-      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=publishedAt&apiKey=ef3fec39b4ce4bab9cad045d876f47be`
+      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=publishedAt&apiKey=fc3c8738bf944c53983892a0fe000474`
     );
     const dataJ = await data.json();
     const result = dataJ.articles;
