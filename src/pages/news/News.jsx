@@ -7,6 +7,7 @@ import "./news.css";
 import Header from "../../components/header/Header";
 import Pagination from "../../components/pagination/Pagination";
 
+
 let PageSize = 9;
 
 const News = (props) => {
@@ -18,7 +19,7 @@ const News = (props) => {
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    return articles.slice(firstPageIndex, lastPageIndex);
+    return articles?.slice(firstPageIndex, lastPageIndex);
   }, [articles, currentPage]);
 
   const capitalizeFirstLetter = (string) => {
