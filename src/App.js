@@ -6,6 +6,7 @@ import LoadingBar from 'react-top-loading-bar';
 import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import SearchPage from './pages/searchpage/SearchPage';
+import ScrollToTop from "react-scroll-to-top";
 
 const App=()=>{
   const pageSize = 5;
@@ -34,6 +35,7 @@ const App=()=>{
             <Route exact path="/search" element={<SearchPage />} />
         </Routes>
       </BrowserRouter>
+      <ScrollToTop smooth />
       <Footer/>
     </div>
   );
