@@ -26,7 +26,7 @@ const Pagination = (props) => {
     siblingCount,
     pageSize,
   });
-  if (currentPage === 0 || paginationRange.length < 2) {
+  if (currentPage === 0 || paginationRange?.length < 2) {
     return null;
   }
   const onNext = () => {
@@ -35,7 +35,7 @@ const Pagination = (props) => {
   const onPrevious = () => {
     onPageChange(currentPage - 1);
   };
-  let lastPage = paginationRange[paginationRange.length - 1];
+  let lastPage = paginationRange[paginationRange?.length - 1];
   return (
     <ul
       className={classnames("pagination-container", { [className]: className })}
