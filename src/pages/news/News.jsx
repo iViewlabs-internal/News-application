@@ -7,7 +7,6 @@ import "./news.css";
 import Header from "../../components/header/Header";
 import Pagination from "../../components/pagination/Pagination";
 
-
 let PageSize = 9;
 
 const News = (props) => {
@@ -42,12 +41,12 @@ const News = (props) => {
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - News`;
     updateNews();
-  }, []);
+  },[]);
   return (
     <>
       <div
         className={
-          currentTableData.length ? "background-img" : "background-image"
+          currentTableData?.length ? "background-img" : "background-image"
         }
       >
         <Header />
@@ -84,7 +83,7 @@ const News = (props) => {
           <Pagination
             className="pagination-bar"
             currentPage={currentPage}
-            totalCount={articles.length}
+            totalCount={articles?.length}
             pageSize={PageSize}
             onPageChange={(page) => setCurrentPage(page)}
           />
