@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
-import NewsItem from "../../components/newsitems/NewsItem";
+import NewsItem from "../../components/newsItems/NewsItem";
 import Spinner from "../../components/spinner/Spinner";
 import PropTypes from "prop-types";
 import NavBar from "../../components/navbar/NavBar";
 import "./news.css";
 import Header from "../../components/header/Header";
 import Pagination from "../../components/pagination/Pagination";
-
+import config from '../../config/config.json'
 let PageSize = 9;
 
 const News = (props) => {
@@ -27,7 +27,7 @@ const News = (props) => {
 
   const updateNews = async () => {
     props.setProgress(10);
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}`;
+    const url = `${config.SERVER_URL}/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}`;
     setLoading(true);
     setPage(page + 1);
     let data = await fetch(url);
@@ -41,7 +41,7 @@ const News = (props) => {
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - News`;
     updateNews();
-  },[]);
+  }, []);
   return (
     <>
       <div
@@ -58,25 +58,26 @@ const News = (props) => {
           </h2>
           {loading && <Spinner />}
           <div className="row">
-            {currentTableData && currentTableData?.map((element) => {
-              return (
-                <>
-                  <div className="col-md-4 " key={element.url}>
-                    <NewsItem
-                      title={element.title ? element.title : ""}
-                      description={
-                        element.description ? element.description : ""
-                      }
-                      imageUrl={element.urlToImage}
-                      newsUrl={element.url}
-                      author={element.author}
-                      date={element.publishedAt}
-                      source={element.source.name}
-                    />
-                  </div>
-                </>
-              );
-            })}
+            {currentTableData &&
+              currentTableData?.map((element) => {
+                return (
+                  <>
+                    <div className="col-md-4 " key={element.url}>
+                      <NewsItem
+                        title={element.title ? element.title : ""}
+                        description={
+                          element.description ? element.description : ""
+                        }
+                        imageUrl={element.urlToImage}
+                        newsUrl={element.url}
+                        author={element.author}
+                        date={element.publishedAt}
+                        source={element.source.name}
+                      />
+                    </div>
+                  </>
+                );
+              })}
           </div>
         </div>
         <div className="page">
