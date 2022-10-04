@@ -58,7 +58,7 @@ const News = (props) => {
           </h2>
           {loading && <Spinner />}
           <div className="row">
-            {currentTableData && currentTableData.map((element) => {
+            {currentTableData && currentTableData?.map((element) => {
               return (
                 <>
                   <div className="col-md-4 " key={element.url}>
