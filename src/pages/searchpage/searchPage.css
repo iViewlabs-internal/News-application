@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+.search-data{
+  padding: 5px 80px;
+  min-height: 100vh;
+}
 .filter {
   display: flex;
   justify-content: center;
@@ -9,8 +13,20 @@
 }
 .filter-page {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   margin-top: 4vh;
+}
+.apply{
+  font-weight: 800;
+  list-style: none;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  height: 5.5vh;
+  width: 5.5vw;
 }
 .search-query{
   margin-right:42vw ;

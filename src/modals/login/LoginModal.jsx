@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import "./loginModal.css";
 
 const LoginModal = () => {
   const [logEmail, setLogEmail] = useState("");
   const [logPassword, setLogPassword] = useState("");
   const navigate = useNavigate();
+
   const log = () => {
     if (logEmail === "" && logPassword === "") {
       alert("Bad Try! Please Enter your Email and Password. ");
@@ -85,6 +87,9 @@ const LoginModal = () => {
                 />
                 <br />
               </div>
+              <Link to="/Resetpassword" className="f-pwd">
+                <h4 className="forgot-pwd">Forgot Password </h4>
+              </Link>
               <br />
               <div className="form-group">
                 <button type="submit" className="login-button">

@@ -7,10 +7,12 @@ import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import SearchPage from './pages/searchPage/SearchPage';
 import ScrollToTop from "react-scroll-to-top";
+import EditProfile from './components/editProfile/EditProfile';
+import ResetPassword from './components/resetpassword/ResetPassword';
 
 const App=()=>{
   const pageSize = 5;
-  const apiKey='fc3c8738bf944c53983892a0fe000474'
+  const apiKey='ef3fec39b4ce4bab9cad045d876f47be'
   //const apiKey = process.env.REACT_APP_NEWS_API
   const [progress,setProgress] = useState(0);
   
@@ -23,7 +25,7 @@ const App=()=>{
         progress={progress}
       />            
         <Routes>
-        <Route path="/" element={<Home/>}></Route>
+            <Route path="/" element={<Home/>}/>
             <Route path="/home" element={<News setProgress={setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country='in' category="general"/>}></Route>
             <Route exact path="/business" element={<News setProgress={setProgress} apiKey={apiKey} key="business" pageSize={pageSize} country='in' category="business"/>}></Route>
             <Route exact path="/health" element={<News setProgress={setProgress} apiKey={apiKey} key="health" pageSize={pageSize} country='in' category="health"/>}></Route>
@@ -33,10 +35,12 @@ const App=()=>{
             <Route exact path="/technology" element={<News setProgress={setProgress} apiKey={apiKey} key="technology" pageSize={pageSize} country='in' category="technology"/>}></Route>
             <Route exact path="/entertainment" element={<News setProgress={setProgress} apiKey={apiKey} key="entertainment" pageSize={pageSize} country='in' category="entertainment"/>}></Route>
             <Route exact path="/search" element={<SearchPage />} />
+            <Route exact path="/editProfile" element={<EditProfile/>}/>
+            <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
         </Routes>
-      </BrowserRouter>
-      <ScrollToTop smooth />
       <Footer/>
+      </BrowserRouter>
+      <ScrollToTop className='scroll-btn' color='white' smooth />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchData, searchQuery } from "../../redux/action/action";
 import config from "../../config/config.json";
 
+
 const NavBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const NavBar = () => {
   };
   const fetchRequest = async () => {
     const data = await fetch(
-      `${config.SERVER_URL}/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&language=en&apiKey=fc3c8738bf944c53983892a0fe000474`
+      `${config.SERVER_URL}/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&language=en&apiKey=ef3fec39b4ce4bab9cad045d876f47be`
     );
     const dataJ = await data.json();
     const result = dataJ.articles;
@@ -31,9 +32,9 @@ const NavBar = () => {
     <div>
       <div className="div-header mt-3">
         <nav className="navbar fixed-position navbar-expand-lg pd-5 navbar-dark bg-dark ">
-          <div className="container">
+          <div className="container-fluid">
             <div
-              className="collapse navbar-collapse d-flex"
+              className="collapse navbar-collapse d-flex navbar-data"
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav nav_menu ml-auto mb-2 mb-lg-0">

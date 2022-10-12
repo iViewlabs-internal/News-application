@@ -9,7 +9,7 @@ const NewsItem = (props) => {
         <div className="main-card my-4">
           <div className="card body">
             <div className="news-item"> {source} </div>
-            <div className="card-body">
+            <div className="card-body news-box">
               <img
                 src={
                   !imageUrl
@@ -20,10 +20,12 @@ const NewsItem = (props) => {
                 alt="Xiaomi Mobile"
                 style={{ height: "30vh" }}
               />
-              <h5 className="card-title">{title}</h5>
+              <h5 className="card-title">{title}
+              {!title.length ? "lorem" : title.slice(0, 10)}</h5>
               <p className="card-text">
                 {!description.length ? "lorem" : description.slice(0, 100)}
               </p>
+              
               <p className="card-text">
                 <small className="text-muted">
                   By {!author ? "Unknown" : author}{" "}

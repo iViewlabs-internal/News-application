@@ -1,0 +1,45 @@
+
+.img-home {
+  width: 30vw;
+  height: 50vh;
+  margin-right: 50px;
+}
+.home video {
+  position: absolute;
+  z-index: -1;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.background-color {
+  background-color: rgb(5, 4, 4);
+}
+.home-section-data {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  border-bottom: 5px solid rgb(41, 40, 40);
+}
+.content {
+  font-size: 24px;
+  padding: 100px;
+  width: 80%;
+}
+.img-home2 {
+  width: 30vw;
+  height: 50vh;
+  margin-left: 50px;
+}
+.writer {
+  margin-left: 80vh;
+}
+.image-slide{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    padding: 15px;
+    margin-left: 50vh;
+    border-bottom: 5px solid rgb(41, 40, 40);
+}

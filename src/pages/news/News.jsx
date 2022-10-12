@@ -57,12 +57,12 @@ const News = (props) => {
             Top {capitalizeFirstLetter(props.category)} Headlines
           </h2>
           {loading && <Spinner />}
-          <div className="row">
+          <div className="row search-data">
             {currentTableData &&
               currentTableData?.map((element) => {
                 return (
                   <>
-                    <div className="col-md-4 " key={element.url}>
+                    <div className="container-fluid col-md-4" key={element.url}>
                       <NewsItem
                         title={element.title ? element.title : ""}
                         description={

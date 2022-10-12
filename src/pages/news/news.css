@@ -8,17 +8,3 @@
   font-size: 40px;
   font-weight: bolder;
 }
-.background-img{  
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCDwD92x8C0v7SUGxvkaJWxC2rg6XSme8uJrHpjGnU47DNmzUnH00FhXtFVzQa7rhdxg&usqp=CAU");
-  background-size:cover;
-  background-repeat:repeat-y;
-  height: auto;
-}
-
-.background-image{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCDwD92x8C0v7SUGxvkaJWxC2rg6XSme8uJrHpjGnU47DNmzUnH00FhXtFVzQa7rhdxg&usqp=CAU");
-  background-size:cover;
-  background-repeat:repeat-y;
-  height: 91.5vh;
-
-}

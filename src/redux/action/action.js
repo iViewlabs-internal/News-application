@@ -3,6 +3,7 @@ export const DATA = "DATA";
 export const DATE = "DATE";
 export const SORTBY = "SORTBY";
 
+
 export const searchQuery = (payload) => ({
   type: QUERY,
   payload,
