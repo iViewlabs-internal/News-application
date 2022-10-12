@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import RegisterModal from "../../modals/registermodal/RegisterModal";
-import LoginModal from "../../modals/loginmodal/LoginModal";
+import RegisterModal from "../../modals/register/RegisterModal";
+import LoginModal from "../../modals/login/LoginModal";
 
 const Home = () => {
   return (

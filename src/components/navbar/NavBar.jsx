@@ -3,6 +3,7 @@ import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { searchData, searchQuery } from "../../redux/action/action";
+import config from "../../config/config.json";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -14,21 +15,11 @@ const NavBar = () => {
   const sortby = store.searchReducer.setSortBy;
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     dispatch(searchQuery(e.target.value));
   };
   const fetchRequest = async () => {
     const data = await fetch(
-      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&language=en&apiKey=fc3c8738bf944c53983892a0fe000474`
-    );
-    const dataJ = await data.json();
-    const result = dataJ.articles;
-    dispatch(searchData(result));
-    navigate("/search");
-  };
-  const pressed = async () => {
-    const data = await fetch(
-      `https://newsapi.org/v2/everything?q=${query}&pageSize=10&from=${date}&sortBy=publishedAt&apiKey=fc3c8738bf944c53983892a0fe000474`
+      `${config.SERVER_URL}/everything?q=${query}&pageSize=10&from=${date}&sortBy=${sortby}&language=en&apiKey=fc3c8738bf944c53983892a0fe000474`
     );
     const dataJ = await data.json();
     const result = dataJ.articles;
@@ -90,7 +81,6 @@ const NavBar = () => {
                       className="search-bar"
                       placeholder="Search what you want!"
                       onChange={handleChange}
-                      onKeyDown={pressed}
                     />
                     <button onClick={fetchRequest} className="search-btn">
                       Search
