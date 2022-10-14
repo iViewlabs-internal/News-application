@@ -1,20 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 .heading {
-  color: rgb(211, 203, 203);
+  color: rgb(26, 23, 23);
   font-weight: 800;
   display: flex;
   justify-content: space-between;
   margin: auto;
   font-family: "Times New Roman", Times, serif;
 }
+.xyz{
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 220px;
+  height: 80px;
+  border: #060608;
+}
+.news-data{
+  font-size: 50px;
+ 
+}
+.about-news{
+
+  margin-top: 250px;
+  margin-right: 170px;
+
+
+}
 
 .bg-img-home {
-  background-image: url("https://images.pexels.com/photos/3095621/pexels-photo-3095621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("https://images.pexels.com/photos/1652340/pexels-photo-1652340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
-  height: 91.5vh;
+  height: 100vh;
+  width: 100%;
+  background-color: #060608;
+  /* opacity: 0.85; */
   background-position: center;
+  border-bottom: 5px solid rgb(41, 40, 40);
+
 }
+
+
 
 .model-ul {
   display: flex;
@@ -22,9 +47,24 @@
   margin-right: 80px;
 }
 .login {
-  margin-right: 2vw;
+  margin-right: 1vw;
 }
-.login,
+.login {
+  padding: 4px 15px;
+  font-weight: 800;
+  list-style: none;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  /* background-color: white; */
+  color: rgb(27, 25, 25);
+  border: none;
+  border-radius: 12px;
+  height: 6.5vh;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid rgb(7, 7, 7);
+
+}
 .register {
   padding: 4px 15px;
   font-weight: 800;
@@ -32,17 +72,47 @@
   font-size: 25px;
   text-align: center;
   cursor: pointer;
-  color: black;
+  color: white;
+  background-color: #060608;
   border: none;
   border-radius: 12px;
+  height: 6.5vh;
   font-family: "Times New Roman", Times, serif;
 }
-.login:hover,
+.login:hover{
+  list-style: none;
+  cursor: pointer;
+  color: rgb(33, 31, 31);
+  font-family: "Times New Roman", Times, serif;
+}
+
 .register:hover {
-  background-color: #28c93b;
-  border: none;
+  background-color: rgb(43, 39, 39);
   list-style: none;
   cursor: pointer;
   color: white;
   font-family: "Times New Roman", Times, serif;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 1240px;
+  margin: auto;
+  padding: 0.1rem;
+}
+
+button{
+  background-image: linear-gradient(45deg,var(--primary-dark) 0%,var(--primary-light)100%);
+}
+:root{
+  --primary-dark:#060608;
+  --primary-light:#252628;
+
 }

@@ -1,7 +1,11 @@
-.footer{
-    background: black;
-    color: white;
-    display: flex;
-    padding-top: 5px;
-    text-align: center;
+.footer {
+  border-top: 5px solid rgb(41, 40, 40);
+  background-color: rgb(230, 232, 235);
+  padding: 50px;
+  display: flex;
+}
+.logo-img-png {
+  height: 25vh;
+  width:22vw
+
 }

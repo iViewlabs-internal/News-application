@@ -2,16 +2,21 @@ import React from "react";
 import "./Home.css";
 import RegisterModal from "../../modals/register/RegisterModal";
 import LoginModal from "../../modals/login/LoginModal";
-
+import HomeSection from "../../components/homeSection/HomeSection";
+import brand from "../../assets/brand1.png";
 const Home = () => {
   return (
     <div>
       <div className="bg-img-home">
-        <div className="heading">
-          <div className="pt-4 mx-5 title">
-            <h1 className="fw-bolder">The Times News</h1>
+        <div className="px-4 py-4 heading">
+          <div>
+            {/* <h1 className="fw-bolder">The Times News</h1> */}
+            <img className="xyz" src={brand} />
           </div>
-
+          <div className="about-news">
+            <h3>Welcome back!</h3>
+            <p className="news-data">Where news never gets old </p>
+          </div>
           <ul className="model-ul login-form">
             <li
               className="login"
@@ -38,6 +43,7 @@ const Home = () => {
       {/* modal code for register */}
 
       <RegisterModal />
+      <HomeSection />
     </div>
   );
 };

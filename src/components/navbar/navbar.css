@@ -1,48 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
-.search-page{
-    display: flex;
+.search-page {
+  display: flex;
 }
-.nav-link{
-    color: white;
-    font-size: large;
+.nav-link {
+  color: white;
+  font-size: large;
 }
-.search-bar{
-    
-    border-radius:9px;
-    margin-left:17.5vw;
-    height: 5.5vh;
-    width: 70%;
-    justify-content: center;
-    position: relative;
-    width: 360px;
+.navbar-data {
+  justify-content: center;
 }
-::placeholder{
-    padding-left: 0.5vw;
+.search-bar {
+  border-radius: 9px;
+  margin-left: 17.5vw;
+  height: 5.5vh;
+  width: 70%;
+  justify-content: center;
+  position: relative;
+  width: 360px;
+  padding: 20px;
 }
-.search-btn:hover{
-    color: white;
-    background-color: rgb(64, 186, 64);
+::placeholder {
+  padding-left: 0.5vw;
 }
-.logout-btn{
-    background-color: white;
-    border-radius:8px;
-    color: black;
-    margin-top: 1.5px;
-    border: solid;
-    font-size: bold;
-    height: 40px;
-    width: 100px;
-    font-family: "Times New Roman", Times, serif;
+.search-btn:hover {
+  color: white;
+  background-color: rgb(64, 186, 64);
 }
-.search-btn{
-    border-radius: 9px;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    text-align: center;
-    padding-top: 4px;
+.logout-btn {
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  margin-top: 1.5px;
+  border: solid;
+  font-size: bold;
+  height: 40px;
+  width: 100px;
+  font-family: "Times New Roman", Times, serif;
+}
+.search-btn {
+  border-radius: 9px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  text-align: center;
+  padding-top: 4px;
+  color: white;
 }
 
-.logout-btn:hover{
-    background-color: rgb(239, 50, 50);
+.logout-btn:hover {
+  background-color: rgb(239, 50, 50);
 }

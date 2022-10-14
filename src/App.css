@@ -16,3 +16,6 @@ body {
   display: flex;
   justify-content: center;
 }
+.scroll-btn{
+  margin-bottom:35px ;
+}
