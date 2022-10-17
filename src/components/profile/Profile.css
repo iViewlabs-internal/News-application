@@ -6,6 +6,7 @@
 .reset:hover,
 .reset:active {
   color: azure;
+  
 }
 
 .user {
@@ -32,4 +33,10 @@
 }
 .card-registration .select-arrow {
   top: 13px;
+}
+.edit-btn{
+  /* display: flex; */
+  color: aliceblue;
+  font-size: 15px;
+  border-radius: 6px;
 }

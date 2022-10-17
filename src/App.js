@@ -7,8 +7,9 @@ import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import SearchPage from './pages/searchPage/SearchPage';
 import ScrollToTop from "react-scroll-to-top";
-import EditProfile from './components/editProfile/EditProfile';
 import ResetPassword from './components/resetpassword/ResetPassword';
+import EditProfile from "../src/pages/profile/edit-profile/EditProfile";
+import Profile from './pages/profile/Profile';
 
 const App=()=>{
   const pageSize = 5;
@@ -17,7 +18,7 @@ const App=()=>{
   const [progress,setProgress] = useState(0);
   
   return (
-     <div>   
+     <div className='pages-container'>   
       <BrowserRouter>
       <LoadingBar
         color='#f11946'
@@ -35,8 +36,9 @@ const App=()=>{
             <Route exact path="/technology" element={<News setProgress={setProgress} apiKey={apiKey} key="technology" pageSize={pageSize} country='in' category="technology"/>}></Route>
             <Route exact path="/entertainment" element={<News setProgress={setProgress} apiKey={apiKey} key="entertainment" pageSize={pageSize} country='in' category="entertainment"/>}></Route>
             <Route exact path="/search" element={<SearchPage />} />
-            <Route exact path="/editProfile" element={<EditProfile/>}/>
             <Route exact path="/ResetPassword" element={<ResetPassword/>}/>
+            <Route exact path="/profile" element={<Profile/>}/>
+            <Route exact path="/edit-profile" element={<EditProfile/>}/>
         </Routes>
       <Footer/>
       </BrowserRouter>

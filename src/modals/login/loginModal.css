@@ -12,6 +12,9 @@
   border-color: rgb(175, 161, 161);
   padding: 10px;
 }
+::placeholder {
+  padding-left: 0vw;
+}
 .forgot-pwd{
   color: rgb(37, 37, 38);
   font-size: 20px;
@@ -20,6 +23,7 @@
 }
 .f-pwd{
   text-decoration: none;
+  opacity: none;
 
 }
 .password-txt {
@@ -28,6 +32,7 @@
   border-radius: 10px;
   border-color: rgb(175, 161, 161);
   padding: 10px;
+  outline: none;
 }
 .login-button {
   border: none;
@@ -36,4 +41,25 @@
   width: 100%;
   color: white;
   height: 6vh;
+}
+.read-pwd{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+            border-radius: 5px;
+            margin-right: 5%;
+            right: 0px;
+            z-index: 2;
+            border: none;
+            top: 51%;
+            height: 30px;
+            cursor: pointer;
+            color: white !important;
+            background-color: #1e90ff !important;
+            transform: translateX(2px);
+}
+@media only screen and (max-width: 768px) {
+  .modal-lg {
+    width: 100%;
+  } 
 }

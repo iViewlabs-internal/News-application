@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 .card-title {
-  font-family: "Times New Roman", Times, serif;
   font-weight: 25px;
   font-size: 22px;
   line-height: 100%;
@@ -10,7 +8,6 @@
 }
 
 .news-item {
-  font-family: "Times New Roman", Times, serif;
   justify-content: center;
   text-align: center;
   font-weight: bolder;
@@ -23,8 +20,58 @@
   box-shadow: 1px 2px 8px;
   background-color: rgb(235, 229, 227);
   padding: 20px;
-  height: 75vh;
+  height: 80vh;
 }
 .main-card {
   height: 100%;
+}
+.title{
+  height: 11vh;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+.description{
+  height: 8vh;
+}
+.author{
+  height: 6vh
+}
+@media only screen and (max-width: 756px) {
+  .card-title {
+    font-weight: 25px;
+    font-size: 22px;
+    line-height: 100%;
+    color: black;
+    margin-top: 10px;
+  }
+  
+  .news-item {
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 100%;
+    color: rgb(44, 41, 41);
+  }
+  .body {
+    border-radius: 20px;
+    box-shadow: 1px 2px 8px;
+    background-color: rgb(235, 229, 227);
+    padding: 20px;
+    height: 90vh;
+  }
+  .main-card {
+    height: 100%;
+  }
+  .title{
+    height: 12vh;
+  }
+  .headline {
+    text-align: center;
+    margin:"20px 0px";
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
 }

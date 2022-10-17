@@ -37,7 +37,7 @@ const ResetPassword = () => {
     <div>
       <section className="h-100 user">
         <button className="reset-back" onClick={Back}>
-          <i class="fa-solid fa-arrow-left"></i> Back{" "}
+          <i className="fa-solid fa-arrow-left"></i> Back{" "}
         </button>
         <div className="container py-5 h-80">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -59,6 +59,7 @@ const ResetPassword = () => {
                         <input
                           type="password"
                           value={oldPassword}
+                          placeholder="Enter old Password"
                           onChange={(e) => {
                             setOldPassword(e.target.value);
                           }}
@@ -73,6 +74,7 @@ const ResetPassword = () => {
                         <input
                           type="password"
                           id="form3Example97"
+                          placeholder="Enter new Password"
                           value={newPassword}
                           onChange={(e) => {
                             setNewPassword(e.target.value);
@@ -87,6 +89,7 @@ const ResetPassword = () => {
                         <input
                           type="password"
                           value={confirmNewPassword}
+                          placeholder="Confirm Password"
                           onChange={(e) => {
                             setConfirmNewPassword(e.target.value);
                           }}

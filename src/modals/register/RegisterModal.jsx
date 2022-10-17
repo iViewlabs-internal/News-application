@@ -3,6 +3,8 @@ import "./RegisterModel.css";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Link } from "react-router-dom";
+import LoginModal from "../login/LoginModal";
 
 const RegisterModal = () => {
   const validationSchema = Yup.object().shape({
@@ -121,9 +123,7 @@ const RegisterModal = () => {
                 <br />
               </div>
               <div className="form-group">
-                <button onClick={onSubmit} className="register-button fs-4">
-                  Register
-                </button>
+                <button className="register-button fs-4">Register</button>
               </div>
             </form>
           </div>

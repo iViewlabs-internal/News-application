@@ -8,23 +8,19 @@
   margin: auto;
   font-family: "Times New Roman", Times, serif;
 }
-.xyz{
+.xyz {
   margin-top: 10px;
   margin-left: 30px;
   width: 220px;
   height: 80px;
   border: #060608;
 }
-.news-data{
+.news-data {
   font-size: 50px;
- 
 }
-.about-news{
-
+.about-news {
   margin-top: 250px;
   margin-right: 170px;
-
-
 }
 
 .bg-img-home {
@@ -36,10 +32,7 @@
   /* opacity: 0.85; */
   background-position: center;
   border-bottom: 5px solid rgb(41, 40, 40);
-
 }
-
-
 
 .model-ul {
   display: flex;
@@ -63,7 +56,6 @@
   height: 6.5vh;
   font-family: "Times New Roman", Times, serif;
   border: 1px solid rgb(7, 7, 7);
-
 }
 .register {
   padding: 4px 15px;
@@ -79,22 +71,21 @@
   height: 6.5vh;
   font-family: "Times New Roman", Times, serif;
 }
-.login:hover{
+.login:hover {
   list-style: none;
   cursor: pointer;
-  color: rgb(33, 31, 31);
+  color: rgb(244, 237, 237);
+  background-color: black;
   font-family: "Times New Roman", Times, serif;
 }
 
 .register:hover {
-  background-color: rgb(43, 39, 39);
+  background-color: rgb(209, 200, 200);
   list-style: none;
   cursor: pointer;
-  color: white;
+  color: rgb(23, 20, 20);
   font-family: "Times New Roman", Times, serif;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -102,17 +93,20 @@
   padding: 0;
 }
 
-.container{
+.container {
   max-width: 1240px;
   margin: auto;
   padding: 0.1rem;
 }
 
-button{
-  background-image: linear-gradient(45deg,var(--primary-dark) 0%,var(--primary-light)100%);
+button {
+  background-image: linear-gradient(
+    45deg,
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
+  );
 }
-:root{
-  --primary-dark:#060608;
-  --primary-light:#252628;
-
+:root {
+  --primary-dark: #b23a3a;
+  --primary-light: #2a8383;
 }

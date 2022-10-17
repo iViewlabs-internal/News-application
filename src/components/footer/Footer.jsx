@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
-import {year} from "../../utils";
+import { year } from "../../utils";
 const Footer = () => {
   return (
     <>
@@ -11,24 +10,20 @@ const Footer = () => {
         <div className="container d-flex justify-content-between pt-5 pb-4 footer">
           {" "}
           <div className="w-25">
-            
             <p>
               {" "}
-              “The good news is we have everything we need to leave fossil fuels in the ground. All we need is for you to join the rest of the world to bring about a cleaner, more stable, and peaceful future.”{" "}
+              “The good news is we have everything we need to leave fossil fuels
+              in the ground. All we need is for you to join the rest of the
+              world to bring about a cleaner, more stable, and peaceful future.”{" "}
             </p>
           </div>{" "}
           <div className="d-flex flex-column">
-          
             <div className="pt-3 fw-semibold fs-6">TOP CATEGORIES</div>{" "}
-            
             <div className="pt-3 fw-semibold fs-6">General</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Sports</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Business</div>{" "}
-           
           </div>{" "}
           <div className="d-flex flex-column">
-          
-      
             <div className="pt-3 fw-semibold fs-6">Entertainment</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Technology</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Health</div>{" "}
@@ -36,9 +31,7 @@ const Footer = () => {
           </div>{" "}
           <div className="d-flex flex-column">
             {" "}
-            <div className="pt-3 fw-semibold fs-6">
-              About Times News
-            </div>{" "}
+            <div className="pt-3 fw-semibold fs-6">About Times News</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Contact Us</div>{" "}
             <div className="pt-3 fw-semibold fs-6">FAQs</div>{" "}
           </div>{" "}
@@ -89,5 +82,3 @@ const Footer = () => {
   );
 };
 export default Footer;
-
-

@@ -6,7 +6,7 @@ const NewsItem = (props) => {
   return (
     <>
       <div>
-        <div className="main-card my-4">
+        <div className="main-card my-4 mx-2">
           <div className="card body">
             <div className="news-item"> {source} </div>
             <div className="card-body news-box">
@@ -20,13 +20,18 @@ const NewsItem = (props) => {
                 alt="Xiaomi Mobile"
                 style={{ height: "30vh" }}
               />
-              <h5 className="card-title">{title}
-              {!title.length ? "lorem" : title.slice(0, 10)}</h5>
-              <p className="card-text">
-                {!description.length ? "lorem" : description.slice(0, 100)}
+              <h5 className="card-title title">
+                {!title.length
+                  ? "If people in the media cannot decide whether they are in the business of reporting news or manufacturing propaganda, it is all the more important that the public"
+                  : title.slice(0, 100)}
+              </h5>
+              <p className="card-text description">
+                {!description.length
+                  ? "If people in the media cannot decide whether they are in the business of reporting news or manufacturing propaganda,"
+                  : description.slice(0, 100)}
               </p>
-              
-              <p className="card-text">
+
+              <p className="card-text author">
                 <small className="text-muted">
                   By {!author ? "Unknown" : author}{" "}
                 </small>
@@ -35,7 +40,7 @@ const NewsItem = (props) => {
                 rel="noreferrer"
                 href={newsUrl}
                 target="_blank"
-                className="btn btn-sm btn-dark text-center"
+                className="btn btn-sm btn-dark text-center read-btn"
               >
                 Read More
               </a>
