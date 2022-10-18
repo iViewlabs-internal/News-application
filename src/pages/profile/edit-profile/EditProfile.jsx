@@ -2,14 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../../components/header/Header";
 import NavBar from "../../../components/navbar/NavBar";
-import Edit from "../../../components/edit/Edit"
+import Edit from "../../../components/edit/Edit";
 const EditProfile = () => {
-  const navigate = useNavigate();   
- 
+  const navigate = useNavigate();
+
   const Back = () => {
     navigate("/home");
   };
-  
+
   return (
     <>
       <Header />
@@ -32,7 +32,7 @@ const EditProfile = () => {
                     />
                   </div>
                   <div className="col-xl-6">
-                  <Edit/>
+                    <Edit />
                   </div>
                 </div>
               </div>

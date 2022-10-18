@@ -1,17 +1,16 @@
-import React,{useState,useMemo} from "react";
-import { useDispatch, useSelector, } from "react-redux";
+import React, { useState, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/header/Header";
 import NavBar from "../../components/navbar/NavBar";
 import NewsItem from "../../components/newsItems/NewsItem";
 import { setDate, setSortBy } from "../../redux/action/action";
 import "./searchPage.css";
-import { searchData} from "../../redux/action/action";
+import { searchData } from "../../redux/action/action";
 import config from "../../config/config.json";
 import { useNavigate } from "react-router-dom";
 import Pagination from "../../components/pagination/Pagination";
 
 let PageSize = 6;
-
 
 const SearchPage = () => {
   const store = useSelector((state) => state);
@@ -43,7 +42,7 @@ const SearchPage = () => {
       <div className={data?.length === 0 ? "bg-img" : "bg-image"}>
         <Header />
         <NavBar />
-      
+
         <div className="container">
           <div className="filter-page">
             {data?.length !== 0 && query?.length !== 0 ? (
@@ -73,7 +72,9 @@ const SearchPage = () => {
               </select>
             </div>
             <div>
-              <button className="apply m-lg-2" onClick={fetchRequest}>Apply</button>
+              <button className="apply m-lg-2" onClick={fetchRequest}>
+                Apply
+              </button>
             </div>
           </div>
           <div className="row search-data">
@@ -85,32 +86,35 @@ const SearchPage = () => {
             ) : (
               ""
             )}
-            {currentTableData && currentTableData?.map((element) => {
-              return (
-                <div className="container-fluid col-md-4" key={element.url}>
-                  <NewsItem
-                    title={element.title ? element.title : ""}
-                    description={element.description ? element.description : ""}
-                    imageUrl={element.urlToImage}
-                    newsUrl={element.url}
-                    author={element.author}
-                    date={element.publishedAt}
-                    source={element.source.name}
-                  />
-                </div>
-              );
-            })}
+            {currentTableData &&
+              currentTableData?.map((element) => {
+                return (
+                  <div className="container-fluid col-md-4" key={element.url}>
+                    <NewsItem
+                      title={element.title ? element.title : ""}
+                      description={
+                        element.description ? element.description : ""
+                      }
+                      imageUrl={element.urlToImage}
+                      newsUrl={element.url}
+                      author={element.author}
+                      date={element.publishedAt}
+                      source={element.source.name}
+                    />
+                  </div>
+                );
+              })}
           </div>
           <div className="page">
-          {console.log(data, currentPage, PageSize)}
-          <Pagination
-            className="pagination-bar"
-            currentPage={currentPage}
-            totalCount={data?.length || 0}
-            pageSize={PageSize}
-            onPageChange={(page) => setCurrentPage(page)}
-          />
-        </div>
+            {console.log(data, currentPage, PageSize)}
+            <Pagination
+              className="pagination-bar"
+              currentPage={currentPage}
+              totalCount={data?.length || 0}
+              pageSize={PageSize}
+              onPageChange={(page) => setCurrentPage(page)}
+            />
+          </div>
         </div>
       </div>
     </>

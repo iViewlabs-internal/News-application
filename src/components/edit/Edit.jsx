@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Edit.css"
+import "./Edit.css";
 const Edit = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -13,7 +13,7 @@ const Edit = () => {
     } else {
       localStorage.setItem("name", name);
       localStorage.setItem("email", email);
-      navigate("/profile")
+      navigate("/profile");
     }
   };
   return (
@@ -24,7 +24,6 @@ const Edit = () => {
         <div className=" mb-4">
           <div className="form-outline">
             <h2> Name :</h2>
-
             <input
               type="text"
               value={name}
@@ -51,7 +50,7 @@ const Edit = () => {
             />
             <div className="d-flex justify-content-end pt-3">
               <button
-                className="btn btn-lg ms-2 bg-primary"
+                className="btn btn-lg ms-2 bg-primary update-btn"
                 type="button"
                 onClick={handleUpdate}
               >

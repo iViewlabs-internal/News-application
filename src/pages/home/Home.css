@@ -29,7 +29,6 @@
   height: 100vh;
   width: 100%;
   background-color: #060608;
-  /* opacity: 0.85; */
   background-position: center;
   border-bottom: 5px solid rgb(41, 40, 40);
 }
@@ -49,7 +48,6 @@
   font-size: 25px;
   text-align: center;
   cursor: pointer;
-  /* background-color: white; */
   color: rgb(27, 25, 25);
   border: none;
   border-radius: 12px;
@@ -107,6 +105,6 @@ button {
   );
 }
 :root {
-  --primary-dark: #b23a3a;
-  --primary-light: #2a8383;
+  --primary-dark: #393838;
+  --primary-light: #1b1818;
 }

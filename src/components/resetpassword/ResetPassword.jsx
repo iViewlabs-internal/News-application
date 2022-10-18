@@ -104,14 +104,6 @@ const ResetPassword = () => {
                       <div className="d-flex justify-content-end pt-3 ">
                         <button
                           type="button"
-                          onClick="ClearFields('')"
-                          className="btn btn-light btn-lg reset"
-
-                        >
-                          Clear
-                        </button>
-                        <button
-                          type="button"
                           className="btn btn-warning btn-lg ms-2 reset"
                           onClick={reset}
                         >

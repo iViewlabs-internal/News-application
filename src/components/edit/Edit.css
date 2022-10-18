@@ -1,43 +1,39 @@
 .reset {
-    color: aliceblue;
-    font-size: 20px;
-    border-radius: 10px;
-  }
-  .reset:hover,
-  .reset:active {
-    color: azure;
-    
-  }
-  
-  .user {
-    padding: 60px;
-  }
-  .img-fluid {
-    border-top-left-radius: 0.9rem;
-    border-bottom-left-radius: 0.5rem;
-    padding-left: 10px;
-    height: 80vh;
-    width: 80vw;
-    margin-bottom: 2.4vh;
-  }
-  .img-pwd{
-      height: 65vh;
-      margin-left: 20px;
-      padding-top: 20px;
-  }
-  .card-registration .select-input.form-control[readonly]:not([disabled]) {
-    font-size: 1rem;
-    line-height: 2;
-    padding-left: 0.7em;
-    padding-right: 0.7em;
-  }
-  .card-registration .select-arrow {
-    top: 13px;
-  }
-  .edit-btn{
-    /* display: flex; */
-    color: aliceblue;
-    font-size: 15px;
-    border-radius: 6px;
-  }
-  
+  color: aliceblue;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.reset:hover,
+.reset:active {
+  color: azure;
+}
+
+.user {
+  padding: 60px;
+}
+.img-fluid {
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.5rem;
+  padding-left: 10px;
+  height: 80vh;
+  width: 80vw;
+  margin-bottom: 2.4vh;
+}
+.img-pwd {
+  height: 65vh;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+.update-btn {
+  color: aliceblue;
+}

@@ -36,9 +36,17 @@ const NavBar = () => {
     <div>
       <div className="div-header mt-3">
         <nav className="navbar fixed-position navbar-expand-lg pd-5 navbar-dark bg-dark ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <div
@@ -91,7 +99,7 @@ const NavBar = () => {
                       placeholder="Search what you want!"
                       onChange={handleChange}
                     />
-                    <button onClick={fetchRequest} className="search-btn" >
+                    <button onClick={fetchRequest} className="search-btn">
                       Search
                     </button>
                   </div>
@@ -115,7 +123,11 @@ const NavBar = () => {
                         >
                           Profile
                         </Link>
-                        <a className="dropdown-item" onClick={logout} id="lg-btn">
+                        <a
+                          className="dropdown-item"
+                          onClick={logout}
+                          id="lg-btn"
+                        >
                           LogOut
                         </a>
                       </li>

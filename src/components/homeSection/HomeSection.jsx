@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomeSection.css";
-import bgImage from "../../components/video/content.mp4";
-import content from "../../components/video/news.mp4";
+import bgImage from "../../assets/video/content.mp4";
+import content from "../../assets/video/news.mp4";
 
 const HomeSection = () => {
   return (
@@ -9,7 +9,6 @@ const HomeSection = () => {
       <div className="home-section-data">
         <div className="content">
           <h1> Enjoy on Your laptop</h1>
-          {/* <p>All new news is old news happening to new people</p> */}
           <p>
             Good news is rare this days, and everything glittering ounce of it
             should be cherished and hoarded and worshiped and fondled like a

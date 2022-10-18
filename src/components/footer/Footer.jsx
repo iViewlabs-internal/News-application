@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { year } from "../../utils";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const Footer = () => {
             <div className="pt-3 fw-semibold fs-6">Business</div>{" "}
           </div>{" "}
           <div className="d-flex flex-column">
-            <div className="pt-3 fw-semibold fs-6">Entertainment</div>{" "}
+            <div className="pt-3 fw-semibold fs-6 ">Entertainment</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Technology</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Health</div>{" "}
             <div className="pt-3 fw-semibold fs-6">Science</div>{" "}
