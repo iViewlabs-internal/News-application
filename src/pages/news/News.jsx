@@ -44,14 +44,9 @@ const News = (props) => {
   }, []);
   return (
     <>
-      <div
-        className={
-          currentTableData?.length ? "background-img" : "background-image"
-        }
-      >
+      <div>
         <Header />
         <NavBar />
-
         <div className="container">
           <h2 className="headline">
             Top {capitalizeFirstLetter(props.category)} Headlines
@@ -62,8 +57,9 @@ const News = (props) => {
               currentTableData?.map((element) => {
                 return (
                   <>
-                    <div className="container-fluid col-md-4" key={element.url}>
+                    <div className="container-fluid col-md-4">
                       <NewsItem
+                       key={element.url}
                         title={element.title ? element.title : ""}
                         description={
                           element.description ? element.description : ""

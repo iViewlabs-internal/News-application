@@ -10,7 +10,6 @@ const Home = () => {
       <div className="bg-img-home">
         <div className="px-4 py-4 heading">
           <div>
-            {/* <h1 className="fw-bolder">The Times News</h1> */}
             <img className="xyz" src={brand} />
           </div>
           <div className="about-news">

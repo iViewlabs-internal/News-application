@@ -1,45 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import * as Yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 import "./loginModal.css";
-
 const LoginModal = () => {
-  const [logEmail, setLogEmail] = useState("");
-  const [logPassword, setLogPassword] = useState("");
   const navigate = useNavigate();
 
-  const log = () => {
-    if (logEmail === "" && logPassword === "") {
-      alert("Bad Try! Please Enter your Email and Password. ");
-    } else if (logEmail === "") {
-      alert("Email is missing");
-    } else if (logPassword === "") {
-      alert("Password is missing");
-    } else if (
-      logEmail !== localStorage.getItem("email") &&
-      logPassword === localStorage.getItem("password")
+  const log = (data) => {
+    if (
+      data.email !== localStorage.getItem("email") &&
+      data.password === localStorage.getItem("password")
     ) {
       alert("Incorrect Email");
     } else if (
-      logEmail === localStorage.getItem("email") &&
-      logPassword !== localStorage.getItem("password")
+      data.email === localStorage.getItem("email") &&
+      data.password !== localStorage.getItem("password")
     ) {
-      setLogPassword("");
       alert("Incorrect Password");
     } else if (
-      logEmail === localStorage.getItem("email") &&
-      logPassword === localStorage.getItem("password")
+      data.email === localStorage.getItem("email") &&
+      data.password === localStorage.getItem("password")
     ) {
-      setLogEmail("");
-      setLogPassword("");
       navigate("/home");
-    } else {
-      setLogEmail("");
-      setLogPassword("");
-      alert("incorrect Credentials");
     }
   };
-
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().email("Email is invalid").required("Email is required"),
+    password: Yup.string().required("Password is required"),
+    acceptTerms: Yup.bool().oneOf([true], "Accept Terms is required"),
+  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
   return (
     <div
       className="modal fade"
@@ -51,7 +49,7 @@ const LoginModal = () => {
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
-            <h1 className="fs-4">Login</h1>
+            <h1 className="fs-3">Login</h1>
             <button
               type="button"
               className="btn-close"
@@ -60,43 +58,49 @@ const LoginModal = () => {
             ></button>
           </div>
           <>
-            <form className="login-form px-3 py-3" onSubmit={log}>
-              <div className="form-group">
-                <input
-                  className="emailID"
-                  type="email"
-                  placeholder="Your Email"
-                  value={logEmail}
-                  onChange={(e) => {
-                    setLogEmail(e.target.value);
-                  }}
-                />
+            <div className="login-form px-3 py-3">
+              <form onSubmit={handleSubmit(log)}>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    {...register("email")}
+                    className={`form-control emailID ${
+                      errors.email ? "is-invalid" : ""
+                    }`}
+                  />
+                  <div className="invalid-feedback">
+                    {errors.email?.message}
+                  </div>
+                  <br />
+                </div>
+                <div className="form-group">
+                  <input
+                    name="form__input"
+                    type="password"
+                    placeholder="Your Password"
+                    {...register("password")}
+                    className={`form-control password-txt ${
+                      errors.password ? "is-invalid" : ""
+                    }`}
+                  />
+                  <div className="invalid-feedback">
+                    {errors.password?.message}
+                  </div>
+                </div>
+                
+
+                <Link to="/Resetpassword" className="f-pwd">
+                  <h4 className="forgot-pwd">Forgot Password?</h4>
+                </Link>
                 <br />
-              </div>
-              <br />
-              <div className="form-group">
-                <input
-                  className="password-txt"
-                  name="form__input"
-                  type="password"
-                  placeholder="Your Password"
-                  value={logPassword}
-                  onChange={(e) => {
-                    setLogPassword(e.target.value);
-                  }}
-                />
-                <br />
-              </div>
-              <Link to="/Resetpassword" className="f-pwd">
-                <h4 className="forgot-pwd">Forgot Password </h4>
-              </Link>
-              <br />
-              <div className="form-group">
-                <button type="submit" className="login-button">
-                  Login
-                </button>
-              </div>
-            </form>
+                <div className="form-group">
+                  <button type="submit" onClick={log} className="login-button">
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
           </>
         </div>
       </div>

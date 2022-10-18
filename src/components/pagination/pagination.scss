@@ -6,7 +6,7 @@
       height: 32px;
       text-align: center;
       margin: auto 4px;
-      color: rgba(15, 8, 8, 0.87);
+      color: rgba(23, 22, 22, 0.87);
       display: flex;
       box-sizing: border-box;
       align-items: center;
@@ -20,11 +20,13 @@
         cursor: default;
       }
       &:hover {
-        background-color: rgba(233, 139, 139, 0.87);
+        background-color: rgba(16, 15, 15, 0.87);
+        color: antiquewhite;
         cursor: pointer;
       }
       &.selected {
-        background-color: rgba(233, 139, 139, 0.87);
+        color: white;
+        background-color: rgba(12, 11, 11, 0.87);
       }
       .arrow {
         &::before {

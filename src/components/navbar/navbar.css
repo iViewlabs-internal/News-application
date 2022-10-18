@@ -2,6 +2,7 @@
 
 .search-page {
   display: flex;
+  justify-content: space-between;
 }
 .nav-link {
   color: white;
@@ -12,17 +13,14 @@
 }
 .search-bar {
   border-radius: 9px;
-  margin-left: 17.5vw;
+  margin-left: 10.5vw;
   height: 5.5vh;
-  width: 70%;
   justify-content: center;
   position: relative;
   width: 360px;
-  padding: 20px;
-}
-::placeholder {
   padding-left: 0.5vw;
 }
+
 .search-btn:hover {
   color: white;
   background-color: rgb(64, 186, 64);
@@ -43,10 +41,53 @@
   padding-left: 2vw;
   padding-right: 2vw;
   text-align: center;
+  border: 1px solid white;
   padding-top: 4px;
+  color: rgb(235, 230, 230);
+  background-color: aliceblue;
+}
+.search-btn:hover {
+  border: 1px solid rgb(210, 161, 161);
+  background-color: white !important;
   color: white;
 }
 
 .logout-btn:hover {
   background-color: rgb(239, 50, 50);
+}
+.profile {
+  margin-left: 400px;
+}
+.image {
+  width: 35px;
+  margin-left: 1vw;
+}
+#lg-btn {
+  width: 10.5vw;
+  font-size: 1.3rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 4vh;
+  color: white;
+}
+#lg-btn:hover {
+  color: rgb(139, 113, 113);
+}
+.dropdown-menu.show {
+  background-color: rgb(29, 28, 28);
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+.profile-icon {
+  width: 2vw;
+  height: 4vh;
+}
+.icon-btn {
+  margin-left: 100px;
+  outline: none;
+}
+.button:focus {
+  outline: none;
 }

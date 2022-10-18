@@ -3,12 +3,12 @@
 .search-data{
   padding: 5px 80px;
   min-height: 100vh;
+  margin-right: 0 !important;
 }
 .filter {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   font-family: "Times New Roman", Times, serif;
 }
 .filter-page {
@@ -17,19 +17,18 @@
   margin-top: 4vh;
 }
 .apply{
-  font-weight: 800;
+  font-weight: 650;
   list-style: none;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   cursor: pointer;
   color: white;
   border: none;
   border-radius: 12px;
-  height: 5.5vh;
-  width: 5.5vw;
+padding: 1vh 2vw;
 }
 .search-query{
-  margin-right:42vw ;
+  margin-right:35vw ;
   position: relative;
   font-size:1.5rem;
 }
@@ -48,10 +47,12 @@
   height: 40px;
   margin-left: 2vw;
   border-radius: 8px;
+  padding: 10px;
 }
 .date {
   height: 40px;
   border-radius: 8px;
+  padding: 10px;
 }
 .bg-img {
   background-image: url("https://images.pexels.com/photos/3944454/pexels-photo-3944454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");

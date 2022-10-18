@@ -17,12 +17,12 @@
   padding-left: 10px;
   height: 80vh;
   width: 80vw;
-  
+  margin-bottom: 2.4vh;
 }
-.img-pwd{
-    height: 65vh;
-    margin-left: 20px;
-    padding-top: 20px;
+.img-pwd {
+  height: 65vh;
+  margin-left: 20px;
+  padding-top: 20px;
 }
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
@@ -32,4 +32,8 @@
 }
 .card-registration .select-arrow {
   top: 13px;
+}
+
+.update-btn {
+  color: aliceblue;
 }
